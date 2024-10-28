@@ -1,1 +1,2 @@
 # PHGuard
+Easy drive protect.
