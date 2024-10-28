@@ -1,0 +1,8 @@
+﻿  engine.cpp
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Prog\engine.cpp(91,17): warning C4101: “_PE32”: 未引用的局部变量
+  PHGuard.cpp
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Prog\PHGuard.cpp(52,15): error C2660: “CreateThread”: 函数不接受 0 个参数
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\processthreadsapi.h(170,1): message : 参见“CreateThread”的声明
+  PHGuard.h
+  正在生成代码...
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Prog\engine.cpp(93): error C4716: “ph_chkProcAlive”: 必须返回一个值

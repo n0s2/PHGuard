@@ -1,0 +1,22 @@
+﻿  Building 'MyDriver1' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  c.c
+C:\Users\Lenovo\source\repos\MyDriver1\MyDriver1\c.c(46,34): warning C4100: “driver”: 未引用的形参
+C:\Users\Lenovo\source\repos\MyDriver1\MyDriver1\c.c(57,56): warning C4305: “类型强制转换”: 从“UINT64”到“PSYSTEM_SERVICE_TABLE”截断
+C:\Users\Lenovo\source\repos\MyDriver1\MyDriver1\c.c(53,61): warning C4100: “path”: 未引用的形参
+  hook.c
+C:\Users\Lenovo\source\repos\MyDriver1\MyDriver1\hook.c(7,44): warning C4305: “类型强制转换”: 从“unsigned __int64”到“PUCHAR”截断
+C:\Users\Lenovo\source\repos\MyDriver1\MyDriver1\hook.c(24,12): warning C4456: “i”的声明隐藏了上一个本地声明
+C:\Users\Lenovo\source\repos\MyDriver1\MyDriver1\hook.c(9,9): message : 参见“i”的声明
+C:\Users\Lenovo\source\repos\MyDriver1\MyDriver1\hook.c(59,1): warning C4057: “初始化”:“PULONG”与“PLONG”在稍微不同的基类型间接寻址上不同
+C:\Users\Lenovo\source\repos\MyDriver1\MyDriver1\hook.c(60,8): warning C4189: “dwCount”: 局部变量已初始化但不引用
+C:\Users\Lenovo\source\repos\MyDriver1\MyDriver1\hook.c(119,44): warning C4305: “类型强制转换”: 从“UINT64”到“PVOID”截断
+C:\Users\Lenovo\source\repos\MyDriver1\MyDriver1\hook.c(123,2): warning C4305: “类型强制转换”: 从“UINT64”到“void *”截断
+C:\Users\Lenovo\source\repos\MyDriver1\MyDriver1\hook.c(124,32): warning C4305: “类型强制转换”: 从“UINT64”到“PVOID”截断
+C:\Users\Lenovo\source\repos\MyDriver1\MyDriver1\hook.c(132,32): warning C4305: “类型强制转换”: 从“UINT64”到“PVOID”截断
+  正在生成代码...
+  MyDriver1.vcxproj -> C:\Users\Lenovo\source\repos\MyDriver1\Release\MyDriver1.sys
+  Done Adding Additional Store
+  Successfully signed: C:\Users\Lenovo\source\repos\MyDriver1\Release\MyDriver1.sys
+  
+  Inf2Cat task was skipped as there were no inf files to process
+  

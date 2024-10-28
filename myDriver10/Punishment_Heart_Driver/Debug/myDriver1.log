@@ -1,0 +1,51 @@
+﻿  Building 'PHGuard' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping Debug\myDriver1.inf
+  Stamping [Version] section with DriverVer=10/09/2022,16.25.52.50
+  utils.c
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\utils.c(3,63): error C2220: 以下警告被视为错误
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\utils.c(3,63): warning C4100: “sig”: 未引用的形参
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\utils.c(3,48): warning C4100: “size_t”: 未引用的形参
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\utils.c(3,31): warning C4100: “Address”: 未引用的形参
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\utils.c(12,59): warning C4305: “类型强制转换”: 从“ULONG64”到“PLIST_ENTRY”截断
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\utils.c(22,46): warning C4305: “类型强制转换”: 从“ULONG64”到“ULONG *”截断
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\utils.c(9,1): warning C4047: “初始化”:“ULONG64”与“PEPROCESS”的间接级别不同
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\utils.c(37,59): warning C4305: “类型强制转换”: 从“ULONG64”到“PLIST_ENTRY”截断
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\utils.c(47,45): warning C4305: “类型强制转换”: 从“ULONG64”到“UCHAR *”截断
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\utils.c(50,27): warning C4057: “函数”:“const char *”与“PUCHAR”在稍微不同的基类型间接寻址上不同
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\utils.c(50,41): warning C4057: “函数”:“const char *”与“PUCHAR”在稍微不同的基类型间接寻址上不同
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\utils.c(34,1): warning C4047: “初始化”:“ULONG64”与“PEPROCESS”的间接级别不同
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\utils.c(59,34): warning C4100: “FileImageName”: 未引用的形参
+  _driver.c
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.h(34,1): error C2016: C 要求一个结构或联合至少有一个成员
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.h(34,2): warning C4091: “typedef ”: 没有声明变量时忽略“_LDR_DATA_TABLE_ENTRY”的左侧
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(19,59): warning C4305: “类型强制转换”: 从“ULONG64”到“PLIST_ENTRY”截断
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(29,46): warning C4305: “类型强制转换”: 从“ULONG64”到“ULONG *”截断
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(60,20): warning C4057: “函数”:“const char *”与“PUCHAR”在稍微不同的基类型间接寻址上不同
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(65,97): warning C4245: “=”: 从“int”转换到“ACCESS_MASK”，有符号/无符号不匹配
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(111,54): warning C4305: “类型强制转换”: 从“ULONG64”到“ULONG64 *”截断
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(112,24): warning C4047: “!=”:“ULONG64”与“void *”的间接级别不同
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(114,20): warning C4047: “=”:“ULONG64”与“void *”的间接级别不同
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(123,17): error C2065: “PPS_PROTECTION”: 未声明的标识符
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(123,17): error C2146: 语法错误: 缺少“;”(在标识符“_ppsProtection”的前面)
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(123,32): error C2065: “_ppsProtection”: 未声明的标识符
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(123,49): error C2065: “PPS_PROTECTION”: 未声明的标识符
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(123,50): error C2064: 项不会计算为接受 347 个参数的函数
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(124,16): error C2065: “_ppsProtection”: 未声明的标识符
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(124,18): error C2223: “->un”的左侧必须指向结构/联合
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(125,16): error C2065: “_ppsProtection”: 未声明的标识符
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(125,18): error C2223: “->un”的左侧必须指向结构/联合
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(126,16): error C2065: “_ppsProtection”: 未声明的标识符
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.c(126,18): error C2223: “->un”的左侧必须指向结构/联合
+  main.c
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.h(34,1): error C2016: C 要求一个结构或联合至少有一个成员
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\_driver.h(34,2): warning C4091: “typedef ”: 没有声明变量时忽略“_LDR_DATA_TABLE_ENTRY”的左侧
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\main.c(25,24): error C2065: “PLDR_DATA_TABLE_ENTRY”: 未声明的标识符
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\main.c(25,24): error C2146: 语法错误: 缺少“;”(在标识符“pldte”的前面)
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\main.c(25,29): error C2065: “pldte”: 未声明的标识符
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\main.c(26,8): error C2065: “pldte”: 未声明的标识符
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\main.c(26,32): error C2065: “PLDR_DATA_TABLE_ENTRY”: 未声明的标识符
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\main.c(26,33): error C2146: 语法错误: 缺少“;”(在标识符“driver”的前面)
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\main.c(27,7): error C2065: “pldte”: 未声明的标识符
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\main.c(27,9): error C2223: “->Flags”的左侧必须指向结构/联合
+C:\Users\Administrator\Source\Repos\myDriver10\Punishment_Heart_Driver\main.c(29,55): warning C4057: “函数”:“PUCHAR”与“char [12]”在稍微不同的基类型间接寻址上不同
+  正在生成代码...

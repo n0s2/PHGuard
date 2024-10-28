@@ -1,0 +1,90 @@
+;
+; myDriver1.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Sample ; TODO: edit Class
+ClassGuid={78A1C341-4539-11d3-B88D-00C04FAD5171} ; TODO: edit ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=myDriver1.cat
+DriverVer = 08/14/2022,15.39.59.38
+PnpLockDown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+myDriver1_Device_CoInstaller_CopyFiles = 11
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=SampleClassReg
+
+[SampleClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+myDriver1.sys  = 1,,
+;
+
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTx86
+
+[Standard.NTx86]
+%myDriver1.DeviceDesc%=myDriver1_Device, Root\myDriver1 ; TODO: edit hw-id
+
+[myDriver1_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+myDriver1.sys
+
+;-------------- Service installation
+[myDriver1_Device.NT.Services]
+AddService = myDriver1,%SPSVCINST_ASSOCSERVICE%, myDriver1_Service_Inst
+
+; -------------- myDriver1 driver install sections
+[myDriver1_Service_Inst]
+DisplayName    = %myDriver1.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\myDriver1.sys
+
+;
+;--- myDriver1_Device Coinstaller installation ------
+;
+
+[myDriver1_Device.NT.CoInstallers]
+AddReg=myDriver1_Device_CoInstaller_AddReg
+CopyFiles=myDriver1_Device_CoInstaller_CopyFiles
+
+[myDriver1_Device_CoInstaller_AddReg]
+;
+
+
+[myDriver1_Device_CoInstaller_CopyFiles]
+;
+
+
+[myDriver1_Device.NT.Wdf]
+KmdfService =  myDriver1, myDriver1_wdfsect
+[myDriver1_wdfsect]
+KmdfLibraryVersion = 1.15
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+ClassName="Samples" ; TODO: edit ClassName
+DiskName = "myDriver1 Installation Disk"
+myDriver1.DeviceDesc = "myDriver1 Device"
+myDriver1.SVCDESC = "myDriver1 Service"

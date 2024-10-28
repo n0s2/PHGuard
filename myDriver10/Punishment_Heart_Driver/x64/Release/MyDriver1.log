@@ -1,0 +1,32 @@
+﻿  Building 'PHGuard' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Release\myDriver1.inf
+  Stamping [Version] section with DriverVer=10/14/2022,16.3.40.568
+  Performing Custom Build Tools
+  Microsoft (R) Macro Assembler (x64) Version 14.29.30146.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+   Assembling: d_VMEnvironment.asm
+  utils.c
+  _driver.c
+  main.c
+  _thread.c
+  正在生成代码...
+  myDriver1.vcxproj -> C:\Users\Administrator\Source\Repos\myDriver10\x64\Release\PHGuard.sys
+  Done Adding Additional Store
+  Successfully signed: C:\Users\Administrator\Source\Repos\myDriver10\x64\Release\PHGuard.sys
+  
+  Driver is 'Universal'.
+  ........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  C:\Users\Administrator\Source\Repos\myDriver10\x64\Release\PHGuard\phguard.cat
+  Done Adding Additional Store
+  Successfully signed: C:\Users\Administrator\Source\Repos\myDriver10\x64\Release\PHGuard\phguard.cat
+  

@@ -1,0 +1,90 @@
+;
+; PHGuard.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Sample ; TODO: edit Class
+ClassGuid={78A1C341-4539-11d3-B88D-00C04FAD5171} ; TODO: edit ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=PHGuard.cat
+DriverVer = 10/09/2022,16.25.52.50
+PnpLockDown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+PHGuard_Device_CoInstaller_CopyFiles = 11
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=SampleClassReg
+
+[SampleClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+PHGuard.sys  = 1,,
+;
+
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTx86
+
+[Standard.NTx86]
+%PHGuard.DeviceDesc%=PHGuard_Device, Root\PHGuard ; TODO: edit hw-id
+
+[PHGuard_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+PHGuard.sys
+
+;-------------- Service installation
+[PHGuard_Device.NT.Services]
+AddService = PHGuard,%SPSVCINST_ASSOCSERVICE%, PHGuard_Service_Inst
+
+; -------------- PHGuard driver install sections
+[PHGuard_Service_Inst]
+DisplayName    = %PHGuard.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\PHGuard.sys
+
+;
+;--- PHGuard_Device Coinstaller installation ------
+;
+
+[PHGuard_Device.NT.CoInstallers]
+AddReg=PHGuard_Device_CoInstaller_AddReg
+CopyFiles=PHGuard_Device_CoInstaller_CopyFiles
+
+[PHGuard_Device_CoInstaller_AddReg]
+;
+
+
+[PHGuard_Device_CoInstaller_CopyFiles]
+;
+
+
+[PHGuard_Device.NT.Wdf]
+KmdfService =  PHGuard, PHGuard_wdfsect
+[PHGuard_wdfsect]
+KmdfLibraryVersion = 1.15
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+ClassName="Samples" ; TODO: edit ClassName
+DiskName = "PHGuard Installation Disk"
+PHGuard.DeviceDesc = "PHGuard Device"
+PHGuard.SVCDESC = "PHGuard Service"
